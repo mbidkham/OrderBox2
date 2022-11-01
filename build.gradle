@@ -1,0 +1,37 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'java'
+    id 'groovy'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.projectlombok:lombok:1.18.22'
+    implementation 'org.springframework:spring-web'
+    implementation 'javax.validation:validation-api:2.0.1.Final'
+    implementation 'org.modelmapper:modelmapper:2.1.1'
+    implementation 'org.codehaus.groovy:groovy-all:3.0.13'
+    implementation 'com.zanclus:spock-bootstrap:1.0'
+    implementation 'org.codehaus.gmavenplus:gmavenplus-plugin:1.12.1'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.7.5'
+    testImplementation group: 'org.spockframework', name: 'spock-spring', version: '2.1-M2-groovy-3.0'
+    testImplementation 'com.h2database:h2:1.3.148'
+
+
+}
+
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
