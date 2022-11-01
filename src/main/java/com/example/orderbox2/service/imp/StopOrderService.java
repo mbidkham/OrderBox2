@@ -27,4 +27,14 @@ public class StopOrderService implements OrderService {
         OrderEntity order = modelMapper.map(orderCreationDto, OrderEntity.class);
         orderRepository.save(order);
     }
+
+    @Override
+    public void updateOrder() {
+
+    }
+
+    @Override
+    public void cancelOrder() {
+
+    }
 }

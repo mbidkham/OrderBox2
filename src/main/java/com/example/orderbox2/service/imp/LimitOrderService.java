@@ -13,4 +13,14 @@ public class LimitOrderService implements OrderService {
     public void createOrder(OrderCreationDto orderCreationDto) {
 
     }
+
+    @Override
+    public void updateOrder() {
+
+    }
+
+    @Override
+    public void cancelOrder() {
+
+    }
 }
